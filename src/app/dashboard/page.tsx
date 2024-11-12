@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { SidebarInset } from "@/components/ui/sidebar";
 
-export default function Page() {
+export default async function Page() {
   return (
     <div>
       <SidebarInset>
