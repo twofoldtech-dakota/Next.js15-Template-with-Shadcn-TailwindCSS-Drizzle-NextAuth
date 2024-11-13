@@ -1,14 +1,5 @@
 
----
 
-### Title
-**Next.js 15 Template with Shadcn, TailwindCSS, Drizzle, and NextAuth**
-
----
-
-### README.md
-
-```markdown
 # Next.js 15 Template with Shadcn, TailwindCSS, Drizzle, and NextAuth
 
 This is a Next.js 15 template built with modern tools to speed up your development process. It integrates Shadcn for UI components, Tailwind CSS for styling, Drizzle as the TypeScript-first ORM, and NextAuth for authentication.
