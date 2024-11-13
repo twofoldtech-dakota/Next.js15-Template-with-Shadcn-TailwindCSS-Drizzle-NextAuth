@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+
+# Next.js 15 Template with Shadcn, TailwindCSS, Drizzle, and NextAuth
+
+This is a Next.js 15 template built with modern tools to speed up your development process. It integrates Shadcn for UI components, Tailwind CSS for styling, Drizzle as the TypeScript-first ORM, and NextAuth for authentication.
+
+## Features
+
+- **Next.js 15** - The latest features of Next.js with powerful, flexible API routes and components.
+- **Shadcn** - Easily customizable and accessible UI components.
+- **Tailwind CSS** - Rapidly build modern and responsive designs.
+- **Drizzle ORM** - Type-safe ORM for seamless database interactions.
+- **NextAuth** - Authentication made easy, with support for various providers.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Ensure you have **Node.js** and **npm**  installed on your machine.
+
+### Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Proxy-o/Next.js15-Template-with-Shadcn-TailwindCSS-Drizzle-NextAuth
+   cd nextjs-15-template
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+   for me its better to use pnpm 
+   ```bash
+   pnpm install
+   ```
+
+3. Set up environment variables:
+   - Create a `.env` file at the root of the project and add the following environment variables:
+```plaintext
+# Authentication Secret
+AUTH_SECRET="your_auth_secret_here"
+
+# GitHub Authentication (NextAuth)
+AUTH_GITHUB_ID="your_github_client_id"
+AUTH_GITHUB_SECRET="your_github_client_secret"
+
+# Database URL (using Drizzle with PostgreSQL)
+DATABASE_URL="your_pg_link"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Note**:
+- Replace `your_auth_secret_here` with a secure random string for `AUTH_SECRET`.
+- Replace `your_github_client_id` and `your_github_client_secret` with values from your GitHub OAuth application.
+- Replace `your_pg_link`, with you link to db or you can use slqlite. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+### Folder Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/app/` - Contains Next.js app router .
+- `src/components/` - Shared UI components built with Shadcn.
+- `src/hooks/` - Sharded custom hooks .
+- `src/lib/` - Utility functions and configuration files.
+- `src/db/` - Database schema and configurations for Drizzle.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Configuration
 
-## Deploy on Vercel
+- **Authentication**: Set up providers in the `src/auth.ts` configuration.
+- **Database**: Define schema in `src/db/schema.ts` and use Drizzle ORM for database interactions .
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To deploy this application, follow the instructions for deploying Next.js apps on [Vercel](https://vercel.com/) or any other cloud provider.
+
+## Contributing
+
+Feel free to open issues or submit pull requests if you’d like to contribute.
+
+## License
+
+This template is open source and available under the MIT License.
+```
