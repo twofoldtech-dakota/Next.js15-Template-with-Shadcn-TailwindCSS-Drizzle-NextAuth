@@ -1,3 +1,4 @@
+import { auth } from "@/auth";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -9,6 +10,10 @@ import {
 import { SidebarInset } from "@/components/ui/sidebar";
 
 export default async function Page() {
+  const session = await auth();
+
+  console.log(session);
+
   return (
     <div>
       <SidebarInset>
